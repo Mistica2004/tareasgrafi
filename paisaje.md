@@ -1,3 +1,12 @@
+Paisaje Interactivo 
+
+Introducción
+
+El presente proyecto consiste en el desarrollo de un paisaje virtual interactivo utilizando Python, OpenCV y MediaPipe. El objetivo principal es generar una escena gráfica de gran tamaño compuesta por distintos elementos visuales y permitir al usuario recorrerla mediante el seguimiento de la mano capturada por una cámara web.
+
+La aplicación combina técnicas de gráficos por computadora y visión artificial para crear una experiencia interactiva donde los movimientos de la mano controlan el desplazamiento y el nivel de acercamiento dentro del escenario. De esta forma, se logra una navegación intuitiva sin necesidad de utilizar teclado o ratón.
+
+Codigo
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -1561,3 +1570,50 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 
+Descripción General Del Codigo
+
+La escena está formada por un paisaje extenso que incluye diversos objetos distribuidos en diferentes zonas del entorno. Entre los elementos presentes se encuentran:
+
+* Casas.
+* Árboles.
+* Flores.
+* Montañas.
+* Nubes.
+* Sol.
+* Lago.
+* Río.
+* Puente.
+* Carretera.
+* Automóviles.
+* Camión.
+* Escuela.
+* Hospital.
+* Iglesia.
+* Granja.
+* Molino.
+* Estadio.
+* Torre de agua.
+* Vaca.
+
+Cada objeto es generado mediante primitivas gráficas de OpenCV como rectángulos, círculos, líneas, elipses y polígonos, permitiendo construir una escena detallada y visualmente atractiva.
+
+Funcionamiento del Sistema
+
+El programa crea inicialmente una imagen de gran resolución que representa todo el paisaje. Posteriormente, se utiliza MediaPipe Hands para detectar la posición de la mano en tiempo real mediante la cámara web.
+
+El dedo índice se emplea para controlar el desplazamiento de la vista dentro del escenario, mientras que la distancia entre el dedo pulgar y el índice permite controlar el nivel de zoom.
+
+Con base en estos datos, el sistema calcula una ventana de visualización que recorre la imagen principal, mostrando únicamente la región seleccionada y simulando una cámara que explora el entorno.
+
+Tecnologías Utilizadas
+
+* Python
+* OpenCV
+* MediaPipe
+* NumPy
+
+Resultados
+
+Se obtuvo un entorno gráfico interactivo capaz de responder a los movimientos de la mano en tiempo real. El usuario puede desplazarse libremente por el paisaje y acercarse o alejarse de diferentes regiones del escenario utilizando gestos naturales.
+
+La implementación demuestra la integración efectiva de técnicas de visión por computadora con gráficos digitales para desarrollar interfaces interactivas basadas en gestos.
